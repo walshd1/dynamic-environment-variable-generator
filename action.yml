@@ -1,0 +1,19 @@
+name: 'Dynamic Environment Variable Generator'
+description: 'Generates environment variables based on the current branch, commit message, or issue title for dynamic deployments.'
+author: 'walshd1'
+branding:
+  icon: 'zap'
+  color: 'blue'
+inputs:
+  gemini_api_key:
+    description: 'Gemini API key (free)'
+    required: false
+  service_token:
+    description: 'Service token (paid)'
+    required: false
+outputs:
+  result:
+    description: 'Result'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
